@@ -19,7 +19,7 @@ class Database {
             keepAlive: 1
         };
 
-        logMessage("Connecting mongo at %s with options %O", config.db, options);
+        logMessage("Connecting mongo at %s with options %O", config.mongodbUri, options);
         mongoose.Promise = Promise;
 
         this._connection = mongoose.connect(
